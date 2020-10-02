@@ -36,7 +36,8 @@ public class CustomerService {
           guid=customer.getGuid();
           customer.getEmails().forEach(email -> {
               if(!"Y".equalsIgnoreCase(email.getLogicalDeleteFlg())
-                      && sourceList.contains(email.getSource())) {
+                      && sourceList.contains(email.getSource()) && null!=ucbMap.get("UCB_UUID") &&
+                      null!=ucbMap.get("UCB_Identikey")) {
                   EmailEntity customerEntity = getEmailEntity(customer, email);
                   customerEntity.setUcbId(ucbMap.get("UCB_UUID"));
                   customerEntity.setUcbIdentityKey(ucbMap.get("UCB_Identikey"));

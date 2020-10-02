@@ -1,0 +1,22 @@
+{
+  "guid":"guid-1299888",
+  "emails":[
+    {
+      "email" :"srini@lumendata.com",
+      "logicalDeleteFlg": "N",
+      "useType":"Office",
+      "sourceId":"9976544",
+      "source": "XYZ"
+    }
+  ],
+  "identifications":[
+    {
+      "nationalID": "Test-5027",
+      "nationalIDType": "UCB_Identikey"
+    },
+    {
+      "nationalID": "Test-5028",
+      "nationalIDType": "UCB_UUID"
+    }
+  ]
+}
