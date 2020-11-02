@@ -14,6 +14,8 @@ import org.springframework.util.CollectionUtils;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
+
 @Component
 @Slf4j
 public class CustomerService {
@@ -26,6 +28,7 @@ public class CustomerService {
         String guid=null;
       try{
           ObjectMapper objectMapper=new ObjectMapper();
+          //objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
           Customer customer=objectMapper.readValue(data,Customer.class);
           List<EmailEntity> emailEntities=new ArrayList<>();
           List<EmailEntity> deleteEntity=new ArrayList<>();
