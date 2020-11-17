@@ -28,7 +28,7 @@ public class CustomerService {
         String guid=null;
       try{
           ObjectMapper objectMapper=new ObjectMapper();
-          //objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
+          objectMapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
           Customer customer=objectMapper.readValue(data,Customer.class);
           List<EmailEntity> emailEntities=new ArrayList<>();
           List<EmailEntity> deleteEntity=new ArrayList<>();
